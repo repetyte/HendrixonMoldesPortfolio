@@ -599,13 +599,13 @@ export default function App() {
               >
                 <span style={{ width: 7, height: 7, borderRadius: "50%", background: T.accent, display: "inline-block", animation: "pulse-dot 2s infinite" }} />
                 <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.7rem", color: T.accentLight, letterSpacing: "0.06em" }}>
-                  available for opportunities
+                  Available for opportunities
                 </span>
               </div>
 
               <p
                 className={rv("reveal reveal-up", heroReveal.visible && "visible delay-2")}
-                style={{ fontSize: "clamp(1rem, 2vw, 1.2rem)", fontWeight: "bolder", color: T.accent, marginBottom: "1.25rem", lineHeight: 1.5 }}
+                style={{fontFamily: "var(--font-display)", fontSize: "clamp(1.5rem, 2vw, 1.2rem)", fontWeight: 700, color: T.accent, marginBottom: "1.25rem", lineHeight: 1.5 }}
               >
                 Hello! I am
               </p>
@@ -851,22 +851,21 @@ export default function App() {
             {EXPERIENCE.map((exp, i) => (
               <div
                 key={i}
-                className={rv("reveal reveal-left", expReveal.visible && "visible")}
+                className={rv("experience-card reveal reveal-left", expReveal.visible && "visible")}
                 onMouseEnter={() => setHoveredExp(i)}
                 onMouseLeave={() => setHoveredExp(null)}
                 style={{
                   background: T.surface,
-                  border: `1px solid ${hoveredExp === i ? exp.badgeColor + "55" : T.border}`,
+                  border: `1px solid ${hoveredExp === i ? exp.badgeColor : T.border}`,
                   borderRadius: 14,
                   padding: "1.75rem 2rem",
                   transition: "border-color 0.25s, background 0.3s, transform 0.25s, box-shadow 0.25s",
                   display: "grid",
-                  gridTemplateColumns: "1fr auto",
                   gap: "1rem",
                   alignItems: "start",
                   animationDelay: `${0.2 + i * 0.12}s`,
-                  transform: hoveredExp === i ? "translateX(4px)" : "translateX(0)",
-                  boxShadow: hoveredExp === i ? `0 8px 32px rgba(0,0,0,0.15)` : "none",
+                  transform: "translateX(0)",
+                  boxShadow: hoveredExp === i ? `0 16px 48px rgba(0,0,0,0.2), 0 0 0 1px ${exp.badgeColor}` : "none",
                 }}
               >
                 <div>
@@ -958,6 +957,7 @@ export default function App() {
                   </ul>
                 </div>
                 <div
+                  className="experience-period"
                   style={{
                     fontFamily: "var(--font-mono)",
                     fontSize: "0.72rem",
@@ -1004,7 +1004,6 @@ export default function App() {
                   overflow: "hidden",
                   transition: "border-color 0.3s, background 0.3s, box-shadow 0.3s",
                   display: "grid",
-                  gridTemplateColumns: "1fr 340px",
                   animationDelay: `${0.2 + i * 0.15}s`,
                   boxShadow: hoveredProj === i ? `0 16px 48px rgba(0,0,0,0.2), 0 0 0 1px ${proj.accentHex}22` : "none",
                 }}
@@ -1098,6 +1097,7 @@ export default function App() {
                     }}
                   />
                   <div
+                    className="project-img-gradient"
                     style={{
                       position: "absolute",
                       inset: 0,
@@ -1325,8 +1325,11 @@ export default function App() {
           grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
           gap: 1rem;
         }
+        .experience-card { grid-template-columns: minmax(0, 1fr) auto; }
+        .experience-period { grid-column: 2; }
         .project-card { grid-template-columns: 1fr 340px; }
         .project-img { display: block; }
+        .project-img-gradient { display: block; }
 
         @media (max-width: 1024px) {
           .hero-portrait { display: none; }
@@ -1335,7 +1338,14 @@ export default function App() {
           .about-grid > div:first-child { grid-column: 1 / 3; }
           .skills-grid { grid-template-columns: repeat(2, 1fr); }
           .project-card { grid-template-columns: 1fr; }
-          .project-img { display: none; }
+          .project-img {
+            display: block;
+            order: -1;
+            height: 240px;
+          }
+          .project-img-gradient {
+            background: linear-gradient(to top, var(--c-surface) 0%, transparent 58%) !important;
+          }
         }
 
         @media (max-width: 640px) {
@@ -1344,6 +1354,11 @@ export default function App() {
           .about-grid { grid-template-columns: 1fr; }
           .about-grid > div:first-child { grid-column: 1; }
           .skills-grid { grid-template-columns: 1fr; }
+          .experience-card { grid-template-columns: 1fr; }
+          .experience-period {
+            grid-column: 1;
+            text-align: left !important;
+          }
         }
       `}</style>
     </div>

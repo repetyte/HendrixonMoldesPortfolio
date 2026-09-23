@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import 'tailwindcss';
 
-@theme {
-  --font-display: 'DM Sans', sans-serif;
-  --font-body: 'Inter', sans-serif;
+:root {
+  --font-display: 'Montserrat', sans-serif;
+  --font-body: 'Google Sans', sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
   --color-bg: #07070e;
   --color-surface: #0f0f1a;
@@ -60,7 +62,7 @@ html {
 body {
   background: var(--c-bg);
   color: var(--c-text);
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
   transition: background 0.3s ease, color 0.3s ease;
 }
@@ -188,5 +190,5 @@ body {
 
 /* Cert card glow on hover */
 .cert-card:hover {
-  animation: glow-pulse 1.6s ease-in-out infinite;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
 }
