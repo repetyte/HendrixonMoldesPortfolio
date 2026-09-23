@@ -684,7 +684,7 @@ export default function App() {
 
             {/* Portrait */}
             <div
-              className={rv("hero-portrait reveal reveal-right float-card", heroReveal.visible && "visible delay-3")}
+              className={rv("hero-portrait reveal reveal-right", heroReveal.visible && "visible delay-3")}
               style={{ position: "relative" }}
             >
               <div style={{ width: 320, height: 410, borderRadius: 18, overflow: "hidden", border: `1px solid ${T.border}`, position: "relative", background: T.surface, boxShadow: "0 32px 80px rgba(0,0,0,0.35)" }}>
