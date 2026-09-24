@@ -6,8 +6,8 @@
 @import 'tailwindcss';
 
 :root {
-  --font-display: 'Montserrat', sans-serif;
-  --font-body: 'Google Sans', sans-serif;
+  --font-display: 'Montserrat', 'DM Sans', sans-serif;
+  --font-body: 'Google Sans', 'Inter', sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
   --color-bg: #07070e;
   --color-surface: #0f0f1a;
