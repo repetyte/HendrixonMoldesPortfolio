@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef, useCallback } from "react"
+import { BriefcaseBusiness, Code2, Mail } from "lucide-react"
 
 /* ─── Reveal hook ───────────────────────────────────────────── */
 
@@ -856,10 +857,11 @@ export default function App() {
                 onMouseLeave={() => setHoveredExp(null)}
                 style={{
                   background: T.surface,
-                  border: `1px solid ${hoveredExp === i ? exp.badgeColor : T.border}`,
+                  border: `1px solid ${hoveredProj === i ? exp.badgeColor + "66" : T.border}`,
                   borderRadius: 14,
                   padding: "1.75rem 2rem",
-                  transition: "border-color 0.25s, background 0.3s, transform 0.25s, box-shadow 0.25s",
+                  // transition: "border-color 0.25s, background 0.3s, transform 0.25s, box-shadow 0.25s",
+                  transition: "border-color 0.3s, background 0.3s, box-shadow 0.3s",
                   display: "grid",
                   gap: "1rem",
                   alignItems: "start",
@@ -1229,26 +1231,31 @@ export default function App() {
               onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.opacity = "0.88"; (e.currentTarget as HTMLElement).style.transform = "translateY(-2px)" }}
               onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.opacity = "1"; (e.currentTarget as HTMLElement).style.transform = "translateY(0)" }}
             >
+              <Mail size={17} strokeWidth={2} aria-hidden="true" />
               hendrixonnolloramoldes@gmail.com
             </a>
             <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap", justifyContent: "center" }}>
               <a
-                href="tel:+639667663499"
-                style={{ background: T.surface, border: `1px solid ${T.border}`, borderRadius: 8, padding: "11px 18px", fontSize: "0.82rem", color: T.text, textDecoration: "none", fontFamily: "var(--font-mono)", transition: "background 0.3s, border-color 0.3s, transform 0.2s" }}
+                href="https://github.com/repetyte"
+                target="_blank"
+                rel="noreferrer"
+                style={{ display: "inline-flex", alignItems: "center", gap: 8, background: T.surface, border: `1px solid ${T.border}`, borderRadius: 8, padding: "11px 18px", fontSize: "0.82rem", color: T.text, textDecoration: "none", fontFamily: "var(--font-mono)", transition: "background 0.3s, border-color 0.3s, transform 0.2s" }}
                 onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.borderColor = "var(--c-accent)"; (e.currentTarget as HTMLElement).style.transform = "translateY(-2px)" }}
                 onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.borderColor = T.border; (e.currentTarget as HTMLElement).style.transform = "translateY(0)" }}
               >
-                +639 66 766 3499
+                <Code2 size={16} strokeWidth={2} aria-hidden="true" />
+                GitHub
               </a>
               <a
                 href="https://www.linkedin.com/in/hendrixon-moldes/"
                 target="_blank"
                 rel="noreferrer"
-                style={{ background: T.surface, border: `1px solid ${T.border}`, borderRadius: 8, padding: "11px 18px", fontSize: "0.82rem", color: T.text, textDecoration: "none", transition: "border-color 0.2s, background 0.3s, transform 0.2s" }}
+                style={{ display: "inline-flex", alignItems: "center", gap: 8, background: T.surface, border: `1px solid ${T.border}`, borderRadius: 8, padding: "11px 18px", fontSize: "0.82rem", color: T.text, textDecoration: "none", transition: "border-color 0.2s, background 0.3s, transform 0.2s" }}
                 onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.borderColor = "var(--c-accent)"; (e.currentTarget as HTMLElement).style.transform = "translateY(-2px)" }}
                 onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.borderColor = T.border; (e.currentTarget as HTMLElement).style.transform = "translateY(0)" }}
               >
-                LinkedIn →
+                <BriefcaseBusiness size={16} strokeWidth={2} aria-hidden="true" />
+                LinkedIn
               </a>
             </div>
           </div>
