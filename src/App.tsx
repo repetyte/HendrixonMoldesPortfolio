@@ -154,7 +154,8 @@ const PROJECTS = [
     accentHex: "#7c5fff",
     image:
       // "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=420&fit=crop&auto=format",
-      "https://media.licdn.com/dms/image/v2/D562DAQH4gIAG9YNs8g/profile-treasury-image-shrink_1920_1920/B56ZjhbomOH8Ak-/0/1756128778017?e=1790762400&v=beta&t=sm9bedaLGQZqUhP7wYjFuKkbFIaFVFco3Nd0FHtUocM",
+      // "https://media.licdn.com/dms/image/v2/D562DAQH4gIAG9YNs8g/profile-treasury-image-shrink_1920_1920/B56ZjhbomOH8Ak-/0/1756128778017?e=1790762400&v=beta&t=sm9bedaLGQZqUhP7wYjFuKkbFIaFVFco3Nd0FHtUocM",
+      "https://media.licdn.com/dms/image/v2/D562DAQH4gIAG9YNs8g/profile-treasury-image-shrink_1920_1920/B56ZjhbomOH8Ak-/0/1756128778017?e=1791392400&v=beta&t=08a7uzOcld_9hrzJWTAA9n0RoBgYq8a6mSp8y4jgNps",
   },
   {
     title: "HandsMen Threads",
@@ -690,7 +691,7 @@ export default function App() {
             >
               <div style={{ width: 320, height: 410, borderRadius: 18, overflow: "hidden", border: `1px solid ${T.border}`, position: "relative", background: T.surface, boxShadow: "0 32px 80px rgba(0,0,0,0.35)" }}>
                 <img
-                  src="https://scontent.fmnl4-4.fna.fbcdn.net/v/t39.30808-6/816123958_122288891870193305_8695639908882119195_n.jpg?stp=cp6_dst-jpg_tt6&cstp=mx1254x1254&ctp=s1254x1254&_nc_cat=109&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeHoSy2goYxuke1HWzUJJXwsAKllKDoOmEcAqWUoOg6YR7KjKNeeCPDfBlcnevOqTKlWIA0FlHlx1bb5ZxC4LaEH&_nc_ohc=CLz9TDchhVAQ7kNvwGCSaW9&_nc_oc=AdpEbrrVZEhV6eHYI2NCH4pro-Z9QFHqH39NGy4-wLhlqDLtHMQ3Jzvaj_EyWnJopu_wOpfFbPnlUJGH3VqABHW4&_nc_zt=23&_nc_ht=scontent.fmnl4-4.fna&_nc_gid=bSzH3U7ToxQX7qoX8jekZg&_nc_ss=7b2a8&oh=00_AQJtk_YlGwHCl807GSQXYfAw6uhO9dVgDn-9AGKboVEISg&oe=6AB987CD"
+                  src="https://scontent.fmnl4-4.fna.fbcdn.net/v/t39.30808-6/816123958_122288891870193305_8695639908882119195_n.jpg?stp=cp6_dst-jpg_tt6&cstp=mx1254x1254&ctp=s1254x1254&_nc_cat=109&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=gEgaxxM9qEcQ7kNvwFWY6PC&_nc_oc=Adr-gi_6z1_Xk32TasZ0a9nBa4Y70JQ4lvi4N8ZX9KwafBF1GNMTlWVngBGeAEWIDnbdOPb5NYOinYxOYjMBosft&_nc_zt=23&_nc_ht=scontent.fmnl4-4.fna&_nc_gid=BIHe0B5gj3sKnyuY9OMlpg&_nc_ss=7b2a8&oh=00_AQOvujozlgGziwJo3A8forSAkgWxSql2WL59krdksVH2RQ&oe=6AC2FA8D"
                   alt="Professional developer portrait"
                   style={{ width: "100%", height: "100%", objectFit: "cover", transition: "transform 0.5s ease" }}
                   onMouseEnter={(e) => ((e.target as HTMLElement).style.transform = "scale(1.04)")}
