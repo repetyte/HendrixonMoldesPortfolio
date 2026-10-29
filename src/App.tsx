@@ -600,8 +600,8 @@ export default function App() {
                   marginBottom: "2rem",
                 }}
               >
-                <span style={{ width: 7, height: 7, borderRadius: "50%", background: T.accent, display: "inline-block", animation: "pulse-dot 2s infinite" }} />
-                <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.7rem", color: T.accentLight, letterSpacing: "0.06em" }}>
+                <span style={{ width: 7, height: 7, borderRadius: "50%", background: "greenyellow", display: "inline-block", animation: "pulse-dot 2s infinite" }} />
+                <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.7rem", color: "greenyellow", letterSpacing: "0.06em" }}>
                   Available for opportunities
                 </span>
               </div>
@@ -694,6 +694,8 @@ export default function App() {
                 <img
                   src="https://drive.google.com/thumbnail?id=1TdSF0OEv4zAqP7P66JV7vQb6xo53GwUa&sz=w1000"
                   alt="Professional developer portrait"
+                  fetchPriority="high"
+                  decoding="async"
                   style={{ width: "100%", height: "100%", objectFit: "cover", transition: "transform 0.5s ease" }}
                   onMouseEnter={(e) => ((e.target as HTMLElement).style.transform = "scale(1.04)")}
                   onMouseLeave={(e) => ((e.target as HTMLElement).style.transform = "scale(1)")}
@@ -1092,6 +1094,8 @@ export default function App() {
                   <img
                     src={proj.image}
                     alt={proj.title}
+                    loading="lazy"
+                    decoding="async"
                     style={{
                       width: "100%",
                       height: "100%",
